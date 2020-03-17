@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                FIRST MAPA
+            </div>
+            <div class="card-body">
+                <app-map [idMap]="'firstMap'" [idGeocoder]="'geoCoderFm'" (infoPosition)="infoPositionFm($event)"></app-map>
+            </div>
+            <div class="card-footer">
+                {{infoFm?.place}}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                SECOND MAPA
+            </div>
+            <div class="card-body">
+                <app-map [idMap]="'secondMap'"  [idGeocoder]="'geoCoderSm'" (infoPosition)="infoPositionSm($event)"></app-map>
+            </div>
+            <div class="card-footer">
+                {{infoSm?.place}}
+            </div>
+        </div>
+    </div>
+</div>
